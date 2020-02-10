@@ -396,6 +396,18 @@ footer .footer_discl {
   min-height: 600px;
 }
 
+.portfolio_showcase_wrapper {
+  padding-bottom: 100px;
+  min-height: 700px;
+}
+
+.portfolio_showcase_wrapper .portfolio_showcase_card_wrapper {
+  position: relative;
+  float: left;
+  width: 100%;
+  min-height: 700px;
+}
+
 .home_meetplayers .home_text_wrapper {
   float: right;
   width: 390px;

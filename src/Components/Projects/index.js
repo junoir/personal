@@ -38,8 +38,8 @@ class MeetPlayers extends Component {
                 My Portfolio
               </Tag>
             </div>
-            <div className="home_meetplayers_wrapper">
-              <div className="home_card_wrapper">
+            <div className="portfolio_showcase_wrapper">
+              <div className="portfolio_showcase_card_wrapper">
                 <HomeCards show={this.state.show} />
               </div>
             </div>
