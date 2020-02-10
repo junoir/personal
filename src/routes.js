@@ -8,7 +8,7 @@ import PublicRoute from "./Components/authRoutes/publicRoutes.js";
 import Home from "./Components/home";
 import SignIn from "./Components/signin";
 
-import Dashboard from "./Components/admin/Dashboard";
+import Dashboard from "./Components/Admin/Dashboard";
 
 const Routes = props => {
   return (
