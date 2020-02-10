@@ -5,8 +5,8 @@ import { Switch, Route } from "react-router-dom";
 import PrivateRoute from "./Components/authRoutes/privateRoutes";
 import PublicRoute from "./Components/authRoutes/publicRoutes.js";
 
-import Home from "./Components/home";
-import SignIn from "./Components/signin";
+import Home from "./Components/Home";
+import SignIn from "./Components/Signin";
 
 import Dashboard from "./Components/Admin/Dashboard";
 
