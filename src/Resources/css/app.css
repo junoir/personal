@@ -547,7 +547,7 @@ footer .footer_discl {
 ===============================*/
 
 .admin_container {
-  margin-top: 96px;
+  margin-top: 85px;
   display: flex;
 }
 
@@ -649,7 +649,7 @@ footer .footer_discl {
 }
 
 .signin_wrapper form {
-  width: 350px;
+  width: 400px;
   margin: 0 auto;
 }
 
