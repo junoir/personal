@@ -1,11 +1,15 @@
 import React, { Component } from "react";
 import { firebase } from "../../firebase";
 
+import Card from "@material-ui/core/Card";
+import LinearProgress from "@material-ui/core/LinearProgress";
+
 import FormField from "../ui/formFields";
 import { validate } from "../ui/misc";
 
 class SignIn extends Component {
   state = {
+    isLoading: false,
     formError: false,
     formSuccess: "",
     formdata: {
@@ -61,6 +65,9 @@ class SignIn extends Component {
 
   submitForm(event) {
     event.preventDefault();
+    this.setState({
+      isLoading: true
+    });
 
     let dataToSubmit = {};
     let formIsValid = true;
@@ -93,25 +100,30 @@ class SignIn extends Component {
     return (
       <div className="container">
         <div className="signin_wrapper" style={{ margin: "100px" }}>
-          <form onSubmit={event => this.submitForm(event)}>
-            <h2>Please Login</h2>
+          <Card style={{ paddingBottom: "2em" }}>
+            {this.state.isLoading ? <LinearProgress /> : null}
+            <form onSubmit={event => this.submitForm(event)}>
+              <h2>Please Login</h2>
 
-            <FormField
-              id={"email"}
-              formdata={this.state.formdata.email}
-              change={element => this.updateForm(element)}
-            />
+              <FormField
+                id={"email"}
+                formdata={this.state.formdata.email}
+                change={element => this.updateForm(element)}
+              />
 
-            <FormField
-              id={"password"}
-              formdata={this.state.formdata.password}
-              change={element => this.updateForm(element)}
-            />
-            {this.state.formError ? (
-              <div className="error_label">Something is wrong, try again.</div>
-            ) : null}
-            <button onClick={event => this.submitForm(event)}>Log in</button>
-          </form>
+              <FormField
+                id={"password"}
+                formdata={this.state.formdata.password}
+                change={element => this.updateForm(element)}
+              />
+              {this.state.formError ? (
+                <div className="error_label">
+                  Something is wrong, try again.
+                </div>
+              ) : null}
+              <button onClick={event => this.submitForm(event)}>Log in</button>
+            </form>
+          </Card>
         </div>
       </div>
     );
