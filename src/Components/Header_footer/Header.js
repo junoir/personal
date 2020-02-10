@@ -6,7 +6,7 @@ import Typography from "@material-ui/core/Typography";
 
 import { Link } from "react-router-dom";
 
-//import { CityLogo } from "../ui/icons";
+import { CityLogo } from "../ui/icons";
 
 class Header extends Component {
   render() {
@@ -17,17 +17,19 @@ class Header extends Component {
           backgroundColor: "#98c5e9",
           boxShadow: "none",
           padding: "10px 0",
-          borderBottom: "2px solid #00285e"
+          borderBottom: "1px solid #00285e"
         }}
       >
         <Toolbar style={{ display: "flex" }}>
           <div style={{ flexGrow: 1 }}>
             <div className="header_logo">
-              <Typography>Lucky Motseki</Typography>
+              <Link to="/">
+                <Typography>Lucky Motseki</Typography>
+              </Link>
             </div>
           </div>
 
-          <Link to="/the_team">
+          <Link to="/projects">
             <Button color="inherit">The team</Button>
           </Link>
           <Link to="/the_matches">

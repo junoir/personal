@@ -1,4 +1,6 @@
 import React, { Component } from "react";
+import { Helmet } from "react-helmet";
+
 import { firebase } from "../../firebase";
 
 import Card from "@material-ui/core/Card";
@@ -99,6 +101,9 @@ class SignIn extends Component {
   render() {
     return (
       <div className="container">
+        <Helmet>
+          <title>Lucky Motseki | Firebase Login Example</title>
+        </Helmet>
         <div className="signin_wrapper" style={{ margin: "100px" }}>
           <Card style={{ paddingBottom: "2em" }}>
             {this.state.isLoading ? <LinearProgress /> : null}

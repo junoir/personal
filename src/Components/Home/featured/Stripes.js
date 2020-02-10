@@ -13,7 +13,7 @@ class Stripes extends Component {
         delay: 0
       },
       {
-        background: "#0d1831",
+        background: "#ffffff",
         left: 360,
         rotate: 25,
         top: -397,
@@ -35,7 +35,7 @@ class Stripes extends Component {
         key={i}
         show={true}
         start={{
-          background: "#98c5e9",
+          background: [stripe.background],
           opacity: 0,
           left: 0,
           rotate: 0,
@@ -50,7 +50,7 @@ class Stripes extends Component {
           timing: { delay: stripe.delay, duration: 200, ease: easePolyOut },
           events: {
             end() {
-              // console.log('animation finished')
+              console.log("animation finished");
             }
           }
         }}
