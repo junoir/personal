@@ -7,6 +7,7 @@ import PublicRoute from "./Components/authRoutes/publicRoutes.js";
 
 import Home from "./Components/Home";
 import SignIn from "./Components/Signin";
+import Projects from "./Components/Projects";
 
 import Dashboard from "./Components/Admin/Dashboard";
 
@@ -37,6 +38,13 @@ const Routes = props => {
           path="/"
           exact
           component={Home}
+        />
+        <PublicRoute
+          {...props}
+          restricted={false}
+          path="/projects"
+          exact
+          component={Projects}
         />
       </Switch>
     </Layout>
